@@ -18,7 +18,7 @@ constexpr int POKEMON_NUM = 3;
 
 const bool COLLECT_POKEMON = false;
 // Jika SIMPLE_HEURISTIC = true, maka A* Euclidean/Simple.
-// Jika SIMPLE_HEURISTIC = false, maka A* Djikstra/Complex.
+// Jika SIMPLE_HEURISTIC = false, maka A* Dijkstra/Complex.
 const bool SIMPLE_HEURISTIC = false;
 
 struct Coordinate
@@ -492,4 +492,5 @@ int main() {
         return 0;
     }
 }
+
 
