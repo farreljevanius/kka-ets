@@ -17,6 +17,8 @@ using namespace std;
 constexpr int POKEMON_NUM = 3;
 
 const bool COLLECT_POKEMON = true;
+// Jika SIMPLE_HEURISTIC = true, maka A* Euclidean/Simple.
+// Jika SIMPLE_HEURISTIC = false, maka A* Djikstra/Complex.
 const bool SIMPLE_HEURISTIC = false;
 
 struct Coordinate
@@ -296,7 +298,7 @@ inline float eucledian(int x1, int y1, int x2, int y2) { return sqrtf(float(x1 -
 void printMemoryUsage() {
     PROCESS_MEMORY_COUNTERS_EX pmc;
     GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc, sizeof(pmc));
-    SIZE_T memUsed = pmc.WorkingSetSize; // in bytes
+    SIZE_T memUsed = pmc.WorkingSetSize; 
     cout << "Memory usage: " << memUsed / (1024.0 * 1024.0) << " MB\n";
 }
 
@@ -495,3 +497,4 @@ int main() {
         return 0;
     }
 }
+
